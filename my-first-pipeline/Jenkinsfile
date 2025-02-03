@@ -7,6 +7,12 @@ pipeline {
       steps {
         sh 'node --version'
       }
+    } 
+    stage('Run the Container') {
+      steps{
+        echo 'Running the container'
+        sh 'docker run -d --name con1 -p 8080:80 nginx'
+      }
     }
   }
 }
