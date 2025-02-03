@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    docker { image 'node:16-alpine' }
-  }
+  agent any //// Runs directly on the Linux machine
   stages {
     stage('Test') {
       steps {
